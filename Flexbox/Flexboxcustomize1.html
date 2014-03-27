@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        body {
+		    background-image:url('newbackground.png');
+			background-repeat:repeat;
+
+		    font: 40px Helvetica;
+            font: 24px Helvetica;
+          
+        }
+
+        #main {
+            min-height: 800px;
+            margin 10px;
+            padding: 5px;
+            display: -webkit-flex;
+            display:         flex;
+            -webkit-flex-flow: row;
+            flex-flow: row;
+        }
+
+        #main > article {
+            margin: 4px;
+            padding: 5px;
+            border: 5px solid #111111;
+            border-radius: 7pt;
+           
+            -webkit-flex: 3 1 60%;
+            flex: 3 1 60%;
+            -webkit-order: 2;
+            order: 2;
+			text-align:center;
+			text-decoration:underline
+        }
+
+        #main > nav {
+            margin: 4px;
+            padding: 5px;
+            border: 5px solid #111111;
+            border-radius: 7pt;
+     
+            -webkit-flex: 1 6 20%;
+            flex: 1 6 20%;
+            -webkit-order: 1;
+            order: 1;
+			font: 20px Helvetica;
+			text-align:center;
+			text-decoration:underline
+			
+        }
+
+        #main > aside {
+            margin: 4px;
+            padding: 5px;
+            border: 5px solid #111111;
+            border-radius: 7pt;
+   
+            -webkit-flex: 1 6 20%;
+            flex: 1 6 20%;
+            -webkit-order: 3;
+            order: 3;
+			text-align:center;
+			text-decoration:underline
+			
+			
+        }
+
+        header {
+            display: block;
+            margin: 4px;
+            padding: 5px;
+            min-height: 150px;
+            border: 5px solid #111111;
+            border-radius: 7pt;
+			text-align:center;
+			font: 110px Impact;
+			-webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: white;
+        }
+		
+        footer {
+		display: block;
+            margin: 4px;
+            padding: 5px;
+            min-height: 25px;
+            border: 5px solid #111111;
+            border-radius: 7pt;
+			text-align:center;
+			
+			}
+		
+		
+		
+		
+            /* Too narrow to support three columns */
+        @media all and (max-width: 640px) {
+
+            #main, #page {
+                -webkit-flex-flow: column;
+                flex-flow: column;
+                flex-direction: column;
+            }
+
+            #main > article, #main > nav, #main > aside {
+                /* Return them to document order */
+                -webkit-order: 0;
+                order: 0;
+            }
+
+            #main > nav, #main > aside, header, footer {
+                min-height: 50px;
+                max-height: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>Nathan's Website</header>
+<div id='main'>
+    <article>News</article>
+    <nav>Navigation</nav>
+    <aside>Affiliates</aside>
+</div>
+<footer>Created by Nathan Hales Inc.</footer>
+</body>
+</html>
